@@ -10,7 +10,7 @@ import cv2
 import numpy as np
 
 from utils.update_config import update as update_config
-from utils.helpers import load_config, is_mpi_run, delete_outputs
+from utils.helpers import load_config, is_mpi_run, delete_outputs, create_folder
 from utils.visualizations import display_fields, display_video, display_chars, animate
 from utils.build_sim import build_sim
 
@@ -79,11 +79,15 @@ if __name__=="__main__":
 
     geometry, sources, sim, flux_region, flux_object = build_sim(params)
 
+    rel_path = 'vis'
+    abs_path = os.path.abspath(rel_path)
+    create_folder(abs_path)
+
     if params['experiment']['animate'] == 1:
 
         if is_mpi_run():
 
-            print("Error: MPI run detected. Please do not use mpirun to generate animations.")         
+            print("Error: MPI detected. Please do not use mpirun to generate animations.")         
             sys.exit(1)
 
         else:
