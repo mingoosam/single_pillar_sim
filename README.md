@@ -41,3 +41,8 @@ Next, the script displays an image with the phase and transmission characteristi
   mpirun -np {num_cores} python3 main.py -config configs.yaml
   ```
     - If you're not sure how many cores are available, try running `htop` in any terminal.
+ 
+## Results of the Experiment
+
+A poster presentation of the project is located here:
+![poster](/references/meta_atom_poster_final.pdf)
