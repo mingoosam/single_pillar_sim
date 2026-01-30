@@ -8,7 +8,7 @@ At the end of each simulation, transmission and phase information are recorded b
 
 ### Run the experiment
 
-Open the file, `Global-Lab-Repo/sops/meep/single_pillar/configs.yaml, and set the following parameters:
+Open the file, `Global-Lab-Repo/sops/meep/single_pillar/configs.yaml`, and set the following parameters:
 
     - animate : 0
     - resolution : 20
